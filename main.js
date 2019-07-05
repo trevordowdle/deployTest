@@ -6392,8 +6392,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm2015/drag-drop.js");
 /* harmony import */ var _raceType1_race_type1__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./raceType1/race-type1 */ "./src/app/raceType1/race-type1.ts");
-/* harmony import */ var _raceType1_groupingDialog_groupingDialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./raceType1/groupingDialog/groupingDialog */ "./src/app/raceType1/groupingDialog/groupingDialog.ts");
-/* harmony import */ var _raceType1_addRunnerDialog_addDialog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./raceType1/addRunnerDialog/addDialog */ "./src/app/raceType1/addRunnerDialog/addDialog.ts");
+/* harmony import */ var _main_main__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./main/main */ "./src/app/main/main.ts");
+/* harmony import */ var _raceType1_groupingDialog_groupingDialog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./raceType1/groupingDialog/groupingDialog */ "./src/app/raceType1/groupingDialog/groupingDialog.ts");
+/* harmony import */ var _raceType1_addRunnerDialog_addDialog__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./raceType1/addRunnerDialog/addDialog */ "./src/app/raceType1/addRunnerDialog/addDialog.ts");
+
 
 
 
@@ -6408,14 +6410,78 @@ let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"], _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_6__["DragDropModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTooltipModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatIconModule"]],
-        entryComponents: [_raceType1_groupingDialog_groupingDialog__WEBPACK_IMPORTED_MODULE_8__["GroupingDialog"], _raceType1_addRunnerDialog_addDialog__WEBPACK_IMPORTED_MODULE_9__["AddDialog"]],
-        declarations: [_raceType1_race_type1__WEBPACK_IMPORTED_MODULE_7__["RaceType1"], _raceType1_groupingDialog_groupingDialog__WEBPACK_IMPORTED_MODULE_8__["GroupingDialog"], _raceType1_addRunnerDialog_addDialog__WEBPACK_IMPORTED_MODULE_9__["AddDialog"]],
-        bootstrap: [_raceType1_race_type1__WEBPACK_IMPORTED_MODULE_7__["RaceType1"]]
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"], _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_6__["DragDropModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTooltipModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatExpansionModule"]],
+        entryComponents: [_raceType1_groupingDialog_groupingDialog__WEBPACK_IMPORTED_MODULE_9__["GroupingDialog"], _raceType1_addRunnerDialog_addDialog__WEBPACK_IMPORTED_MODULE_10__["AddDialog"]],
+        declarations: [_main_main__WEBPACK_IMPORTED_MODULE_8__["Main"], _raceType1_race_type1__WEBPACK_IMPORTED_MODULE_7__["RaceType1"], _raceType1_groupingDialog_groupingDialog__WEBPACK_IMPORTED_MODULE_9__["GroupingDialog"], _raceType1_addRunnerDialog_addDialog__WEBPACK_IMPORTED_MODULE_10__["AddDialog"]],
+        bootstrap: [_main_main__WEBPACK_IMPORTED_MODULE_8__["Main"]]
     })
 ], AppModule);
 
 
+
+/***/ }),
+
+/***/ "./src/app/main/main.css":
+/*!*******************************!*\
+  !*** ./src/app/main/main.css ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "mat-toolbar.mat-toolbar {\r\n  position: fixed;\r\n  top: 0;\r\n  right: 0;\r\n  left: 0;\r\n  z-index: 10;\r\n  box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbi9tYWluLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFnQjtFQUNoQixPQUFPO0VBQ1AsU0FBUztFQUNULFFBQVE7RUFDUixZQUFZO0VBQ1osdUNBQXVDO0NBQ3hDIiwiZmlsZSI6InNyYy9hcHAvbWFpbi9tYWluLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC10b29sYmFyLm1hdC10b29sYmFyIHtcclxuICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgdG9wOiAwO1xyXG4gIHJpZ2h0OiAwO1xyXG4gIGxlZnQ6IDA7XHJcbiAgei1pbmRleDogMTA7XHJcbiAgYm94LXNoYWRvdzogMCAycHggNXB4IDAgcmdiYSgwLDAsMCwuMyk7XHJcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/main/main.html":
+/*!********************************!*\
+  !*** ./src/app/main/main.html ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-toolbar color=\"primary\">  \r\n  <span>CC Ease</span>\r\n</mat-toolbar>\r\n<race-type1>loading</race-type1>"
+
+/***/ }),
+
+/***/ "./src/app/main/main.ts":
+/*!******************************!*\
+  !*** ./src/app/main/main.ts ***!
+  \******************************/
+/*! exports provided: Main */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Main", function() { return Main; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let Main = class Main {
+    constructor() { }
+    ngOnInit() { }
+};
+Main = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'main',
+        template: __webpack_require__(/*! ./main.html */ "./src/app/main/main.html"),
+        styles: [__webpack_require__(/*! ./main.css */ "./src/app/main/main.css")]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+], Main);
+
+
+
+/***/ }),
+
+/***/ "./src/app/raceType1/addRunnerDialog/addDialog.css":
+/*!*********************************************************!*\
+  !*** ./src/app/raceType1/addRunnerDialog/addDialog.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".warn {\r\n  color:red;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmFjZVR5cGUxL2FkZFJ1bm5lckRpYWxvZy9hZGREaWFsb2cuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsVUFBVTtDQUNYIiwiZmlsZSI6InNyYy9hcHAvcmFjZVR5cGUxL2FkZFJ1bm5lckRpYWxvZy9hZGREaWFsb2cuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLndhcm4ge1xyXG4gIGNvbG9yOnJlZDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -6426,7 +6492,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 mat-dialog-title>Add runner</h1>\r\n<div mat-dialog-content>\r\n  <p>Add Runner</p>\r\n  <mat-form-field>\r\n    <mat-label>Name</mat-label>\r\n    <input matInput [(ngModel)]=\"data.name\" />\r\n  </mat-form-field>\r\n  <mat-form-field>\r\n    <mat-label>Team</mat-label>\r\n    <input matInput [(ngModel)]=\"data.team\" />\r\n  </mat-form-field>\r\n  <mat-form-field>\r\n    <mat-label>Place</mat-label><!-- Really to set the initial time behind the scenes -->\r\n    <input type=\"number\" matInput [(ngModel)]=\"data.place\" (input)=\"updateTime()\" min=\"1\" />\r\n  </mat-form-field>\r\n  <br />\r\n  <mat-label *ngIf=\"data.time\">Time: </mat-label>{{data.time}}\r\n</div>\r\n<div mat-dialog-actions>\r\n  <button mat-button (click)=\"onNoClick()\">Cancel</button>\r\n  <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial>Ok</button>\r\n</div> \r\n\r\n"
+module.exports = "<h1 mat-dialog-title>Add runner</h1>\r\n<div mat-dialog-content>\r\n  <p *ngIf=\"!errMessage\">Entry</p>\r\n  <p class=\"warn\" *ngIf=\"errMessage\">{{errMessage}}</p>\r\n  <mat-form-field>\r\n    <mat-label>Name</mat-label>\r\n    <input matInput [(ngModel)]=\"data.name\" />\r\n  </mat-form-field>\r\n  <mat-form-field>\r\n    <mat-label>Team</mat-label>\r\n    <input matInput [(ngModel)]=\"data.team\" />\r\n  </mat-form-field>\r\n  <mat-form-field>\r\n    <mat-label>Place</mat-label><!-- Really to set the initial time behind the scenes -->\r\n    <input type=\"number\" matInput [(ngModel)]=\"data.place\" (input)=\"updateTime()\" min=\"1\" />\r\n  </mat-form-field>\r\n  <br />\r\n  <mat-label *ngIf=\"data.time\">Time: </mat-label>{{data.time}}\r\n</div>\r\n<div mat-dialog-actions>\r\n  <button mat-button (click)=\"onNoClick()\">Cancel</button>\r\n  <button mat-button (click)=\"addClick()\" cdkFocusInitial>Ok</button>\r\n</div> \r\n\r\n"
 
 /***/ }),
 
@@ -6450,12 +6516,29 @@ let AddDialog = class AddDialog {
     constructor(dialogRef, data) {
         this.dialogRef = dialogRef;
         this.data = data;
+        this.errMessage = '';
     }
     ngOnInit() {
         console.log(this.data);
     }
     onNoClick() {
         this.dialogRef.close();
+    }
+    addClick() {
+        this.errMessage = '';
+        if (!this.data.name) {
+            this.errMessage = 'Name required';
+        }
+        else if (!this.data.team) {
+            this.errMessage = 'Team required';
+        }
+        else if (!this.data.place) {
+            this.errMessage = 'Place required';
+        }
+        if (this.errMessage) {
+            return false;
+        }
+        this.dialogRef.close(this.data);
     }
     updateTime(val) {
         let ref = this.data['results'][this.data['place'] - 1];
@@ -6469,6 +6552,7 @@ AddDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'add-dialog',
         template: __webpack_require__(/*! ./addDialog.html */ "./src/app/raceType1/addRunnerDialog/addDialog.html"),
+        styles: [__webpack_require__(/*! ./addDialog.css */ "./src/app/raceType1/addRunnerDialog/addDialog.css")]
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object])
@@ -6544,7 +6628,7 @@ GroupingDialog = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".button-add {\r\n  color:white;\r\n  cursor:pointer;\r\n  background-color:green;\r\n}\r\n\r\n.example-box {\r\n    padding: 20px 10px;\r\n    border-bottom: solid 1px #ccc;\r\n    color: rgba(0, 0, 0, 0.87);\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n            flex-direction: row;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n    box-sizing: border-box;\r\n    cursor: move;\r\n    background: white;\r\n    font-size: 14px;\r\n}\r\n\r\n.example-list {\r\n    border: solid 1px #ccc;\r\n    min-height: 60px;\r\n    background: white;\r\n    border-radius: 4px;\r\n    display: block;\r\n}\r\n\r\nmat-grid-tile {\r\n  background: lightblue;\r\n  overflow: scroll;\r\n}\r\n\r\n.cdk-drag-preview {\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\r\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\r\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\r\n}\r\n\r\n.cdk-drag-placeholder {\r\n  opacity: 0;\r\n}\r\n\r\n.cdk-drag-animating {\r\n  -webkit-transition: -webkit-transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  transition: -webkit-transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n}\r\n\r\n.example-box:last-child {\r\n  border: none;\r\n}\r\n\r\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\r\n  -webkit-transition: -webkit-transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  transition: -webkit-transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n}\r\n\r\ntable thead th {\r\n  background-color:rgb(220, 220, 220)\r\n}\r\n\r\ntable tbody tr:hover {\r\n  background-color: rgb(238, 238, 238);\r\n}\r\n\r\ntable#tblResult tbody tr, table#tblInfo tbody tr {\r\n  cursor:pointer;\r\n}\r\n\r\ntable#tblResult, table#tblInfo {\r\n  width:92%;\r\n  margin:0 auto;\r\n}\r\n\r\n.cdk-drag-preview {\r\n  background-color:rgb(238, 238, 238)!important;\r\n  padding: 20px 10px;\r\n  border-bottom: solid 1px #ccc;\r\n  color: rgba(0, 0, 0, 0.87);\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n          flex-direction: row;\r\n  -webkit-box-align: center;\r\n          align-items: center;\r\n  -webkit-box-pack: justify;\r\n          justify-content: space-between;\r\n  box-sizing: border-box;\r\n  cursor: move;\r\n  background: white;\r\n  font-size: 14px;\r\n  opacity:.8;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  border-spacing: 0;\r\n  width: 100%;\r\n  border: 1px solid #ddd;\r\n}\r\n\r\nth, td {\r\n  text-align: left;\r\n  padding: 8px;\r\n}\r\n\r\ntr:nth-child(even){background-color: rgba(238,238,238,.3)}\r\n\r\n.container {\r\n  margin:0 5px 0 5px;\r\n  padding:0px;\r\n}\r\n\r\n.btn-container button {\r\n  margin-right:8px;\r\n}\r\n\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmFjZVR5cGUxL3JhY2UtdHlwZTEuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtFQUNaLGVBQWU7RUFDZix1QkFBdUI7Q0FDeEI7O0FBRUQ7SUFDSSxtQkFBbUI7SUFDbkIsOEJBQThCO0lBQzlCLDJCQUEyQjtJQUMzQixxQkFBYztJQUFkLGNBQWM7SUFDZCwrQkFBb0I7SUFBcEIsOEJBQW9CO1lBQXBCLG9CQUFvQjtJQUNwQiwwQkFBb0I7WUFBcEIsb0JBQW9CO0lBQ3BCLDBCQUErQjtZQUEvQiwrQkFBK0I7SUFDL0IsdUJBQXVCO0lBQ3ZCLGFBQWE7SUFDYixrQkFBa0I7SUFDbEIsZ0JBQWdCO0NBQ25COztBQUVEO0lBQ0ksdUJBQXVCO0lBQ3ZCLGlCQUFpQjtJQUNqQixrQkFBa0I7SUFDbEIsbUJBQW1CO0lBQ25CLGVBQWU7Q0FDbEI7O0FBRUQ7RUFDRSxzQkFBc0I7RUFDdEIsaUJBQWlCO0NBQ2xCOztBQUdEO0VBQ0UsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtFQUNuQjs7aURBRStDO0NBQ2hEOztBQUVEO0VBQ0UsV0FBVztDQUNaOztBQUVEO0VBQ0UsdUVBQXVEO0VBQXZELCtEQUF1RDtFQUF2RCx1REFBdUQ7RUFBdkQsMkdBQXVEO0NBQ3hEOztBQUVEO0VBQ0UsYUFBYTtDQUNkOztBQUVEO0VBQ0UsdUVBQXVEO0VBQXZELCtEQUF1RDtFQUF2RCx1REFBdUQ7RUFBdkQsMkdBQXVEO0NBQ3hEOztBQUNEO0VBQ0UsbUNBQW1DO0NBQ3BDOztBQUVEO0VBQ0UscUNBQXFDO0NBQ3RDOztBQUVEO0VBQ0UsZUFBZTtDQUNoQjs7QUFFRDtFQUNFLFVBQVU7RUFDVixjQUFjO0NBQ2Y7O0FBRUQ7RUFDRSw4Q0FBOEM7RUFDOUMsbUJBQW1CO0VBQ25CLDhCQUE4QjtFQUM5QiwyQkFBMkI7RUFDM0IscUJBQWM7RUFBZCxjQUFjO0VBQ2QsK0JBQW9CO0VBQXBCLDhCQUFvQjtVQUFwQixvQkFBb0I7RUFDcEIsMEJBQW9CO1VBQXBCLG9CQUFvQjtFQUNwQiwwQkFBK0I7VUFBL0IsK0JBQStCO0VBQy9CLHVCQUF1QjtFQUN2QixhQUFhO0VBQ2Isa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNoQixXQUFXO0NBQ1o7O0FBRUQ7RUFDRSwwQkFBMEI7RUFDMUIsa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWix1QkFBdUI7Q0FDeEI7O0FBRUQ7RUFDRSxpQkFBaUI7RUFDakIsYUFBYTtDQUNkOztBQUVELG1CQUFtQixzQ0FBc0MsQ0FBQzs7QUFFMUQ7RUFDRSxtQkFBbUI7RUFDbkIsWUFBWTtDQUNiOztBQUVEO0VBQ0UsaUJBQWlCO0NBQ2xCIiwiZmlsZSI6InNyYy9hcHAvcmFjZVR5cGUxL3JhY2UtdHlwZTEuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJ1dHRvbi1hZGQge1xyXG4gIGNvbG9yOndoaXRlO1xyXG4gIGN1cnNvcjpwb2ludGVyO1xyXG4gIGJhY2tncm91bmQtY29sb3I6Z3JlZW47XHJcbn1cclxuXHJcbi5leGFtcGxlLWJveCB7XHJcbiAgICBwYWRkaW5nOiAyMHB4IDEwcHg7XHJcbiAgICBib3JkZXItYm90dG9tOiBzb2xpZCAxcHggI2NjYztcclxuICAgIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODcpO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIGN1cnNvcjogbW92ZTtcclxuICAgIGJhY2tncm91bmQ6IHdoaXRlO1xyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG59XHJcblxyXG4uZXhhbXBsZS1saXN0IHtcclxuICAgIGJvcmRlcjogc29saWQgMXB4ICNjY2M7XHJcbiAgICBtaW4taGVpZ2h0OiA2MHB4O1xyXG4gICAgYmFja2dyb3VuZDogd2hpdGU7XHJcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxufVxyXG5cclxubWF0LWdyaWQtdGlsZSB7XHJcbiAgYmFja2dyb3VuZDogbGlnaHRibHVlO1xyXG4gIG92ZXJmbG93OiBzY3JvbGw7XHJcbn1cclxuXHJcblxyXG4uY2RrLWRyYWctcHJldmlldyB7XHJcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgYm94LXNoYWRvdzogMCA1cHggNXB4IC0zcHggcmdiYSgwLCAwLCAwLCAwLjIpLFxyXG4gICAgICAgICAgICAgIDAgOHB4IDEwcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4xNCksXHJcbiAgICAgICAgICAgICAgMCAzcHggMTRweCAycHggcmdiYSgwLCAwLCAwLCAwLjEyKTtcclxufVxyXG5cclxuLmNkay1kcmFnLXBsYWNlaG9sZGVyIHtcclxuICBvcGFjaXR5OiAwO1xyXG59XHJcblxyXG4uY2RrLWRyYWctYW5pbWF0aW5nIHtcclxuICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMjUwbXMgY3ViaWMtYmV6aWVyKDAsIDAsIDAuMiwgMSk7XHJcbn1cclxuXHJcbi5leGFtcGxlLWJveDpsYXN0LWNoaWxkIHtcclxuICBib3JkZXI6IG5vbmU7XHJcbn1cclxuXHJcbi5leGFtcGxlLWxpc3QuY2RrLWRyb3AtbGlzdC1kcmFnZ2luZyAuZXhhbXBsZS1ib3g6bm90KC5jZGstZHJhZy1wbGFjZWhvbGRlcikge1xyXG4gIHRyYW5zaXRpb246IHRyYW5zZm9ybSAyNTBtcyBjdWJpYy1iZXppZXIoMCwgMCwgMC4yLCAxKTtcclxufVxyXG50YWJsZSB0aGVhZCB0aCB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjpyZ2IoMjIwLCAyMjAsIDIyMClcclxufVxyXG5cclxudGFibGUgdGJvZHkgdHI6aG92ZXIge1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYigyMzgsIDIzOCwgMjM4KTtcclxufVxyXG5cclxudGFibGUjdGJsUmVzdWx0IHRib2R5IHRyLCB0YWJsZSN0YmxJbmZvIHRib2R5IHRyIHtcclxuICBjdXJzb3I6cG9pbnRlcjtcclxufVxyXG5cclxudGFibGUjdGJsUmVzdWx0LCB0YWJsZSN0YmxJbmZvIHtcclxuICB3aWR0aDo5MiU7XHJcbiAgbWFyZ2luOjAgYXV0bztcclxufVxyXG5cclxuLmNkay1kcmFnLXByZXZpZXcge1xyXG4gIGJhY2tncm91bmQtY29sb3I6cmdiKDIzOCwgMjM4LCAyMzgpIWltcG9ydGFudDtcclxuICBwYWRkaW5nOiAyMHB4IDEwcHg7XHJcbiAgYm9yZGVyLWJvdHRvbTogc29saWQgMXB4ICNjY2M7XHJcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC44Nyk7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgY3Vyc29yOiBtb3ZlO1xyXG4gIGJhY2tncm91bmQ6IHdoaXRlO1xyXG4gIGZvbnQtc2l6ZTogMTRweDtcclxuICBvcGFjaXR5Oi44O1xyXG59XHJcblxyXG50YWJsZSB7XHJcbiAgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTtcclxuICBib3JkZXItc3BhY2luZzogMDtcclxuICB3aWR0aDogMTAwJTtcclxuICBib3JkZXI6IDFweCBzb2xpZCAjZGRkO1xyXG59XHJcblxyXG50aCwgdGQge1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgcGFkZGluZzogOHB4O1xyXG59XHJcblxyXG50cjpudGgtY2hpbGQoZXZlbil7YmFja2dyb3VuZC1jb2xvcjogcmdiYSgyMzgsMjM4LDIzOCwuMyl9XHJcblxyXG4uY29udGFpbmVyIHtcclxuICBtYXJnaW46MCA1cHggMCA1cHg7XHJcbiAgcGFkZGluZzowcHg7XHJcbn1cclxuXHJcbi5idG4tY29udGFpbmVyIGJ1dHRvbiB7XHJcbiAgbWFyZ2luLXJpZ2h0OjhweDtcclxufVxyXG5cclxuXHJcbiJdfQ== */"
+module.exports = "\r\nmat-expansion-panel.mat-expansion-panel.header {\r\n  position: fixed;\r\n  top: 64px;\r\n  right: 0;\r\n  left: 0;\r\n  z-index: 10;\r\n  box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);\r\n  max-height:65vh;\r\n  overflow:scroll;\r\n}\r\n\r\n@media (max-width: 599px){\r\n  mat-expansion-panel.mat-expansion-panel.header {\r\n      top: 56px;\r\n  }\r\n}\r\n\r\n.button-add {\r\n  color:white;\r\n  cursor:pointer;\r\n  background-color:green;\r\n}\r\n\r\n.cdk-drag-preview {\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\r\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\r\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\r\n}\r\n\r\n.cdk-drag-placeholder {\r\n  opacity: 0;\r\n}\r\n\r\n.cdk-drag-animating {\r\n  -webkit-transition: -webkit-transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  transition: -webkit-transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n}\r\n\r\ntable thead th {\r\n  background-color:rgb(220, 220, 220)\r\n}\r\n\r\ntable tbody tr:hover {\r\n  background-color: rgb(238, 238, 238);\r\n}\r\n\r\ntable#tblResult tbody tr, table#tblInfo tbody tr {\r\n  cursor:pointer;\r\n}\r\n\r\ntable#tblResult {\r\n  width:92%;\r\n  margin:0 auto;\r\n}\r\n\r\n.cdk-drag-preview {\r\n  background-color:rgb(238, 238, 238)!important;\r\n  padding: 20px 10px;\r\n  border-bottom: solid 1px #ccc;\r\n  color: rgba(0, 0, 0, 0.87);\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n          flex-direction: row;\r\n  -webkit-box-align: center;\r\n          align-items: center;\r\n  -webkit-box-pack: justify;\r\n          justify-content: space-between;\r\n  box-sizing: border-box;\r\n  cursor: move;\r\n  background: white;\r\n  font-size: 14px;\r\n  opacity:.8;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  border-spacing: 0;\r\n  width: 100%;\r\n  border: 1px solid #ddd;\r\n}\r\n\r\nth, td {\r\n  text-align: left;\r\n  padding: 8px;\r\n}\r\n\r\ntr:nth-child(even){background-color: rgba(238,238,238,.3)}\r\n\r\n.container {\r\n  margin:0 5px 0 5px;\r\n  padding:0px;\r\n}\r\n\r\n.btn-container button {\r\n  margin-right:8px;\r\n}\r\n\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmFjZVR5cGUxL3JhY2UtdHlwZTEuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtFQUNFLGdCQUFnQjtFQUNoQixVQUFVO0VBQ1YsU0FBUztFQUNULFFBQVE7RUFDUixZQUFZO0VBQ1osdUNBQXVDO0VBQ3ZDLGdCQUFnQjtFQUNoQixnQkFBZ0I7Q0FDakI7O0FBRUQ7RUFDRTtNQUNJLFVBQVU7R0FDYjtDQUNGOztBQUVEO0VBQ0UsWUFBWTtFQUNaLGVBQWU7RUFDZix1QkFBdUI7Q0FDeEI7O0FBRUQ7RUFDRSx1QkFBdUI7RUFDdkIsbUJBQW1CO0VBQ25COztpREFFK0M7Q0FDaEQ7O0FBRUQ7RUFDRSxXQUFXO0NBQ1o7O0FBRUQ7RUFDRSx1RUFBdUQ7RUFBdkQsK0RBQXVEO0VBQXZELHVEQUF1RDtFQUF2RCwyR0FBdUQ7Q0FDeEQ7O0FBRUQ7RUFDRSxtQ0FBbUM7Q0FDcEM7O0FBRUQ7RUFDRSxxQ0FBcUM7Q0FDdEM7O0FBRUQ7RUFDRSxlQUFlO0NBQ2hCOztBQUVEO0VBQ0UsVUFBVTtFQUNWLGNBQWM7Q0FDZjs7QUFFRDtFQUNFLDhDQUE4QztFQUM5QyxtQkFBbUI7RUFDbkIsOEJBQThCO0VBQzlCLDJCQUEyQjtFQUMzQixxQkFBYztFQUFkLGNBQWM7RUFDZCwrQkFBb0I7RUFBcEIsOEJBQW9CO1VBQXBCLG9CQUFvQjtFQUNwQiwwQkFBb0I7VUFBcEIsb0JBQW9CO0VBQ3BCLDBCQUErQjtVQUEvQiwrQkFBK0I7RUFDL0IsdUJBQXVCO0VBQ3ZCLGFBQWE7RUFDYixrQkFBa0I7RUFDbEIsZ0JBQWdCO0VBQ2hCLFdBQVc7Q0FDWjs7QUFFRDtFQUNFLDBCQUEwQjtFQUMxQixrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLHVCQUF1QjtDQUN4Qjs7QUFFRDtFQUNFLGlCQUFpQjtFQUNqQixhQUFhO0NBQ2Q7O0FBRUQsbUJBQW1CLHNDQUFzQyxDQUFDOztBQUUxRDtFQUNFLG1CQUFtQjtFQUNuQixZQUFZO0NBQ2I7O0FBRUQ7RUFDRSxpQkFBaUI7Q0FDbEIiLCJmaWxlIjoic3JjL2FwcC9yYWNlVHlwZTEvcmFjZS10eXBlMS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxubWF0LWV4cGFuc2lvbi1wYW5lbC5tYXQtZXhwYW5zaW9uLXBhbmVsLmhlYWRlciB7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIHRvcDogNjRweDtcclxuICByaWdodDogMDtcclxuICBsZWZ0OiAwO1xyXG4gIHotaW5kZXg6IDEwO1xyXG4gIGJveC1zaGFkb3c6IDAgMnB4IDVweCAwIHJnYmEoMCwwLDAsLjMpO1xyXG4gIG1heC1oZWlnaHQ6NjV2aDtcclxuICBvdmVyZmxvdzpzY3JvbGw7XHJcbn1cclxuXHJcbkBtZWRpYSAobWF4LXdpZHRoOiA1OTlweCl7XHJcbiAgbWF0LWV4cGFuc2lvbi1wYW5lbC5tYXQtZXhwYW5zaW9uLXBhbmVsLmhlYWRlciB7XHJcbiAgICAgIHRvcDogNTZweDtcclxuICB9XHJcbn1cclxuXHJcbi5idXR0b24tYWRkIHtcclxuICBjb2xvcjp3aGl0ZTtcclxuICBjdXJzb3I6cG9pbnRlcjtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOmdyZWVuO1xyXG59XHJcblxyXG4uY2RrLWRyYWctcHJldmlldyB7XHJcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgYm94LXNoYWRvdzogMCA1cHggNXB4IC0zcHggcmdiYSgwLCAwLCAwLCAwLjIpLFxyXG4gICAgICAgICAgICAgIDAgOHB4IDEwcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4xNCksXHJcbiAgICAgICAgICAgICAgMCAzcHggMTRweCAycHggcmdiYSgwLCAwLCAwLCAwLjEyKTtcclxufVxyXG5cclxuLmNkay1kcmFnLXBsYWNlaG9sZGVyIHtcclxuICBvcGFjaXR5OiAwO1xyXG59XHJcblxyXG4uY2RrLWRyYWctYW5pbWF0aW5nIHtcclxuICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMjUwbXMgY3ViaWMtYmV6aWVyKDAsIDAsIDAuMiwgMSk7XHJcbn1cclxuXHJcbnRhYmxlIHRoZWFkIHRoIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOnJnYigyMjAsIDIyMCwgMjIwKVxyXG59XHJcblxyXG50YWJsZSB0Ym9keSB0cjpob3ZlciB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIzOCwgMjM4LCAyMzgpO1xyXG59XHJcblxyXG50YWJsZSN0YmxSZXN1bHQgdGJvZHkgdHIsIHRhYmxlI3RibEluZm8gdGJvZHkgdHIge1xyXG4gIGN1cnNvcjpwb2ludGVyO1xyXG59XHJcblxyXG50YWJsZSN0YmxSZXN1bHQge1xyXG4gIHdpZHRoOjkyJTtcclxuICBtYXJnaW46MCBhdXRvO1xyXG59XHJcblxyXG4uY2RrLWRyYWctcHJldmlldyB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjpyZ2IoMjM4LCAyMzgsIDIzOCkhaW1wb3J0YW50O1xyXG4gIHBhZGRpbmc6IDIwcHggMTBweDtcclxuICBib3JkZXItYm90dG9tOiBzb2xpZCAxcHggI2NjYztcclxuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjg3KTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICBjdXJzb3I6IG1vdmU7XHJcbiAgYmFja2dyb3VuZDogd2hpdGU7XHJcbiAgZm9udC1zaXplOiAxNHB4O1xyXG4gIG9wYWNpdHk6Ljg7XHJcbn1cclxuXHJcbnRhYmxlIHtcclxuICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xyXG4gIGJvcmRlci1zcGFjaW5nOiAwO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGJvcmRlcjogMXB4IHNvbGlkICNkZGQ7XHJcbn1cclxuXHJcbnRoLCB0ZCB7XHJcbiAgdGV4dC1hbGlnbjogbGVmdDtcclxuICBwYWRkaW5nOiA4cHg7XHJcbn1cclxuXHJcbnRyOm50aC1jaGlsZChldmVuKXtiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDIzOCwyMzgsMjM4LC4zKX1cclxuXHJcbi5jb250YWluZXIge1xyXG4gIG1hcmdpbjowIDVweCAwIDVweDtcclxuICBwYWRkaW5nOjBweDtcclxufVxyXG5cclxuLmJ0bi1jb250YWluZXIgYnV0dG9uIHtcclxuICBtYXJnaW4tcmlnaHQ6OHB4O1xyXG59XHJcblxyXG5cclxuIl19 */"
 
 /***/ }),
 
@@ -6555,7 +6639,7 @@ module.exports = ".button-add {\r\n  color:white;\r\n  cursor:pointer;\r\n  back
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"center\">\r\n  <h1>Because I wanted to send something to space</h1>\r\n</div>\r\n<br />\r\n<div class=\"btn-container\">\r\n  <br />\r\n  <button mat-raised-button color=\"primary\" [disabled]=\"!resultsModified\" (click)=\"undoChanges()\">\r\n    Undo Result Changes\r\n  </button>\r\n  <button mat-raised-button color=\"info\" [disabled]=\"!raceLogic.hasGroupings\" (click)=\"undoGroupings()\">\r\n    Undo Groupings\r\n  </button>\r\n</div>\r\n<br />\r\n<div class=\"container\"> \r\n  <table id=\"tblInfo\" class=\"mat-elevation-z8\">\r\n    <thead>\r\n      <tr>\r\n        <th>PL</th>\r\n        <th>TEAM</th>\r\n        <th>Total Time</th>\r\n        <th>Avg. Time</th>\r\n        <th>Spread</th>\r\n        <th>Score</th>\r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n      <tr *ngFor=\"let key of scoringKeys; let i = index\" (click)=\"showGroupingModal(key)\">\r\n        <td>\r\n          {{i+1}}\r\n        </td>\r\n        <td>\r\n          {{key}}\r\n        </td>\r\n        <td>\r\n          {{formatingUtil.formatTime(raceInfo[key].totalTime)}}\r\n        </td>\r\n        <td>\r\n          {{formatingUtil.formatTime(raceInfo[key].average,true)}}\r\n        </td>\r\n        <td>\r\n          {{formatingUtil.formatTime(raceInfo[key].spread,true)}}\r\n        </td>\r\n        <td>\r\n          {{raceInfo[key].score}}\r\n        </td>\r\n      </tr>\r\n\r\n    </tbody>\r\n  </table>\r\n</div>\r\n<!-- <div *ngFor=\"let key of scoringKeys\">\r\n  {{key}}:<b>{{raceInfo[key].score}}</b>\r\n</div> -->\r\n<br />\r\n<br />\r\n<div class=\"center\">\r\n  <button class=\"button-add\" mat-fab (click)=\"showAddModal()\">\r\n    <mat-icon>add</mat-icon>\r\n  </button>\r\n</div>\r\n<br />\r\n<div cdkDropList (cdkDropListDropped)=\"dropLogic.drop(this,$event)\" class=\"container\">\r\n  <table id=\"tblResult\" class=\"mat-elevation-z8\">\r\n    <thead>\r\n      <tr>\r\n        <th *ngFor=\"let key of resultKeys\">\r\n          {{key}}\r\n        </th>\r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n      <tr matTooltip=\"Drag to simulate results\" matTooltipShowDelay=\"1000\"\r\n        matTooltipHideDelay=\"300\" *ngFor=\"let result of results\" cdkDrag>\r\n        <td *ngFor=\"let key of resultKeys\">\r\n          {{result[key]}}\r\n          <span *ngIf=\"key === 'TEAM' && raceLogic.groupingData[result[key]]\">\r\n            ({{raceLogic.groupingData[result[key]]}})\r\n          </span>\r\n        </td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n</div>"
+module.exports = "\r\n<mat-expansion-panel class=\"header\" [(expanded)]=\"headerInfoExpanded\">\r\n  <mat-expansion-panel-header>\r\n    <mat-panel-title>\r\n      Team Results\r\n    </mat-panel-title>\r\n    <mat-panel-description>\r\n      This is a summary of the content This is a summary of the content This is a summary of the contentj\r\n    </mat-panel-description>\r\n  </mat-expansion-panel-header>\r\n  <div class=\"btn-container\">\r\n    <br />\r\n    <button mat-raised-button color=\"primary\" [disabled]=\"!resultsModified\" (click)=\"undoChanges()\">\r\n      Undo Result Changes\r\n    </button>\r\n    <button mat-raised-button color=\"primary\" [disabled]=\"!raceLogic.hasGroupings\" (click)=\"undoGroupings()\">\r\n      Undo Groupings\r\n    </button>\r\n    <button mat-icon-button color=\"primary\" (click)=\"showAddModal()\">\r\n      <mat-icon>person_add</mat-icon>\r\n    </button>\r\n  </div>\r\n  <br />\r\n  <div class=\"container\"> \r\n    <table id=\"tblInfo\" class=\"mat-elevation-z8\">\r\n      <thead>\r\n        <tr>\r\n          <th>PL</th>\r\n          <th>TEAM</th>\r\n          <th>Total Time</th>\r\n          <th>Avg. Time</th>\r\n          <th>Spread</th>\r\n          <th>Score</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor=\"let key of scoringKeys; let i = index\" (click)=\"showGroupingModal(key)\">\r\n          <td>\r\n            {{i+1}}\r\n          </td>\r\n          <td>\r\n            {{key}}\r\n          </td>\r\n          <td>\r\n            {{formatingUtil.formatTime(raceInfo[key].totalTime)}}\r\n          </td>\r\n          <td>\r\n            {{formatingUtil.formatTime(raceInfo[key].average,true)}}\r\n          </td>\r\n          <td>\r\n            {{formatingUtil.formatTime(raceInfo[key].spread,true)}}\r\n          </td>\r\n          <td>\r\n            {{raceInfo[key].score}}\r\n          </td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</mat-expansion-panel>\r\n<div class=\"center\">\r\n  <h1>Because I wanted to send something to space</h1>\r\n</div>\r\n<br />\r\n<br />\r\n<br />\r\n<div cdkDropList (cdkDropListDropped)=\"dropLogic.drop(this,$event)\" class=\"container\">\r\n  <table id=\"tblResult\" class=\"mat-elevation-z8\">\r\n    <thead>\r\n      <tr>\r\n        <th *ngFor=\"let key of resultKeys\">\r\n          {{key}}\r\n        </th>\r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n      <!-- matTooltip behaves a little different on mobile -->\r\n      <tr matTooltip=\"Drag to simulate results\" matTooltipShowDelay=\"1000\"\r\n        matTooltipHideDelay=\"300\" *ngFor=\"let result of results\" cdkDrag (cdkDragStarted)=\"test()\"> \r\n        <td *ngFor=\"let key of resultKeys\">\r\n          {{result[key]}}\r\n          <span *ngIf=\"key === 'TEAM' && raceLogic.groupingData[result[key]]\">\r\n            ({{raceLogic.groupingData[result[key]]}})\r\n          </span>\r\n        </td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n</div>"
 
 /***/ }),
 
@@ -6592,6 +6676,7 @@ let RaceType1 = class RaceType1 {
         this.dialog = dialog;
         this.resultKeys = ["PL", "NAME", "TEAM", "TIME", "SCORE"];
         this.resultsModified = false;
+        this.headerInfoExpanded = true;
     }
     ngOnInit() {
         this.formatingUtil = new _script_FormatingUtil__WEBPACK_IMPORTED_MODULE_8__["FormatingUtil"]();
@@ -6605,6 +6690,10 @@ let RaceType1 = class RaceType1 {
         this.buildResults(this.startResults);
     }
     ;
+    test() {
+        debugger;
+        this.headerInfoExpanded = false;
+    }
     buildResults(startResults) {
         let info = this.raceLogic.buildResults(startResults);
         this.raceInfo = info.raceInfo;
@@ -6635,7 +6724,7 @@ let RaceType1 = class RaceType1 {
         //check for grouping here
         const dialogRef = this.dialog.open(_addRunnerDialog_addDialog__WEBPACK_IMPORTED_MODULE_4__["AddDialog"], {
             width: '300px',
-            height: '400px',
+            height: '420px',
             data: {
                 results: this.startResults
             }
@@ -7237,7 +7326,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\tdowdle\Desktop\sideProjects\cc-ease\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\tdowdle\Desktop\sideProjects\angular-cc\src\main.ts */"./src/main.ts");
 
 
 /***/ })
